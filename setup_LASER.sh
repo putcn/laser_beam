@@ -7,6 +7,10 @@ source /root/miniconda/bin/activate
 
 export LASER=/LASER
 
+# install vim
+apt update
+apt install vim -y
+
 # install faiss
 conda install -y faiss-cpu -c pytorch
 
@@ -14,11 +18,8 @@ conda install -y faiss-cpu -c pytorch
 conda install -y pytorch-cpu torchvision-cpu -c pytorch
 
 # for Greek and Chinese segmenter
-yes | pip install transliterate jieba
+yes | pip install transliterate jieba scipy
 
 cd $LASER
 bash ./install_models.sh
 bash ./install_external_tools.sh
-
-
-
