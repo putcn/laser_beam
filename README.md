@@ -30,9 +30,16 @@ docker pull putcn/laser_beam
 ```bash
 docker run --rm -it <your image tag here or putcn/laser_beam>
 root@8e07f9e1ff2f:/# cd LASER/source/
-python sentence_encoder_test.py
-[[ 0.00441647 -0.00051235  0.00179952 ...  0.00338433  0.00369184
-  -0.00079282]]
+root@8e07f9e1ff2f:/LASER/source# python sentence_encoder_test.py
+Building prefix dict from the default dictionary ...
+Dumping model to file cache /tmp/jieba.cache
+Loading model cost 1.109 seconds.
+Prefix dict has been built succesfully.
+[[ 1.5119603e-03 -7.4540594e-06 -9.5952407e-04 ...  1.8422114e-02
+   2.2908637e-02  1.3493976e-02]
+ [ 8.6149918e-03  4.4238050e-03  4.7992445e-03 ...  2.9314332e-02
+   3.9299182e-03  1.4128728e-02]]
+similarity 0.685504
 ```
 
 **Please note that LASER is installed in the directory of ```/LASER```**
